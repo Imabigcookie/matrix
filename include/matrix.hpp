@@ -11,7 +11,7 @@ private:
 	int Strings;
 	int **matrix;
 public:
-	Matrix();/конструктор
+	Matrix();//конструктор
 	Matrix(int _Columns, int _Strings);
 	Matrix(const Matrix& result);
 	~Matrix();
