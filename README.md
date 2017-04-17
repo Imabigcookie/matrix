@@ -1,6 +1,5 @@
 # matrix
 
-[![Build Status](https://travis-ci.org/justcppdeveloper/matrix.svg?branch=master)](https://travis-ci.org/justcppdeveloper/matrix)
 
 matrix methods:
 - [x] rows
@@ -12,3 +11,4 @@ matrix methods:
 - [ ] print
 - [ ] operator +
 - [ ] operator *
+[![Build Status](https://travis-ci.org/Imabigcookie/matrix.svg?branch=master)](https://travis-ci.org/Imabigcookie/matrix)
