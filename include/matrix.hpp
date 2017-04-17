@@ -1,13 +1,27 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
-class matrix_t final
+using namespace std;
+
+class Matrix
 {
 private:
-    unsigned int rows_;
-    unsigned int columns_;
-    int** elements_;
+	int Columns;
+	int Strings;
+	int **matrix;
 public:
-    matrix_t() noexcept;
-    auto rows() -> unsigned int;
-    auto columns() -> unsigned int;
+	Matrix();
+	Matrix(int _Columns, int _Strings);
+	Matrix(const Matrix& result);
+	~Matrix();
+	int Columns_() const;
+	int Strings_() const;
+	void search(string filename);
+	bool operator == (const Matrix& m2) const;
+	Matrix operator + (const Matrix& m2) const;
+	Matrix operator * (const Matrix& m2) const;
+	Matrix& operator = (const Matrix& result);
+	friend ostream& operator << (ostream& outfile, Matrix& result);
+	friend istream& operator >> (istream& infile, Matrix& result);
 };
