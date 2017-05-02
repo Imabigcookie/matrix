@@ -29,9 +29,9 @@ SCENARIO("operator +")
 	Matrix matrix1 (3, 3);
 	Matrix matrix2 (3, 3);
 	Matrix matrix3 (3, 3);	
-	std::ifstream("matrix1.txt") >> matrix1;
-	std::ifstream("matrix2.txt") >> matrix2;
-	std::ifstream("summatrix.txt") >> matrix3;
+	std::ifstream("1.txt") >> matrix1;
+	std::ifstream("2.txt") >> matrix2;
+	std::ifstream("sum.txt") >> matrix3;
 	REQUIRE(matrix1 + matrix2 == matrix3);
 }
 
@@ -40,9 +40,9 @@ SCENARIO("operator *")
 	Matrix matrix1 (3, 3);
 	Matrix matrix2 (3, 3);
 	Matrix matrix3 (3, 3);	
-	std::ifstream("matrix1.txt") >> matrix1;
-	std::ifstream("matrix2.txt") >> matrix2;
-	std::ifstream("multmatrix.txt") >> matrix3;
+	std::ifstream("1.txt") >> matrix1;
+	std::ifstream("2.txt") >> matrix2;
+	std::ifstream("mult.txt") >> matrix3;
 	REQUIRE(matrix1 * matrix2 == matrix3);
 }
 SCENARIO("operator =") 
