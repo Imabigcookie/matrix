@@ -17,7 +17,7 @@ public:
 	~Matrix();
 	int Columns_() const;
 	int Strings_() const;
-	void search(string filename);
+	void search(const string& filename);
 	bool operator == (const Matrix& m2) const;
 	Matrix operator + (const Matrix& m2) const;
 	Matrix operator * (const Matrix& m2) const;
