@@ -62,7 +62,7 @@ istream& operator >> (istream& infile, Matrix& result)
 	return infile;
 }
 
-void Matrix::search(string filename) 
+void Matrix::search(const string& filename) 
 {
 	ifstream infile;
 	infile.open(filename);
