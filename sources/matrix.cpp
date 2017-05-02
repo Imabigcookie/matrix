@@ -62,18 +62,20 @@ istream& operator >> (istream& infile, Matrix& result)
 	return infile;
 }
 
-void Matrix::search(const string& filename) 
+void Matrix::search(const std::string& filename) 
 {
-	ifstream infile;
-	infile.open(filename);
+	instream infile;
+	infile.open (filename);
 	if (!infile.is_open())
 		cout << "Error! Try again!" << endl;
 	else
 	{
 		matrix = new int*[Strings];
-		for (int i = 0; i < Strings; i++){
+		for (int i = 0; i < Strings; i++)
+		{
 			matrix[i] = new int[Columns];
-			for (int j = 0; j < Columns; j++){
+			for (int j = 0; j < Columns; j++)
+			{
 				infile >> matrix[i][j];
 			}
 		}
@@ -84,7 +86,8 @@ void Matrix::search(const string& filename)
 ostream& operator << (ostream& outfile, Matrix& result)
 {
 	for (int i = 0; i < result.Strings; i++){
-		for (int j = 0; j < result.Columns; j++){
+		for (int j = 0; j < result.Columns; j++)
+		{
 			outfile << result.matrix[i][j] << " ";
 		}
 	}
