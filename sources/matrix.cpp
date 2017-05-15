@@ -62,7 +62,7 @@ istream& operator >> (istream& infile, Matrix& result)
 	return infile;
 }
 
-void Matrix::scan(string filename)const
+void Matrix::search(string filename)const
 {
 	ifstream fin;
 	fin.open(filename);
@@ -70,9 +70,9 @@ void Matrix::scan(string filename)const
 		cout << "The file isn't find" << endl;
 	else
 	{
-		for (int i = 0; i < line; ++i)
+		for (int i = 0; i < Strings; ++i)
 		{
-			for (int j = 0; j < column; ++j)
+			for (int j = 0; j < Columns; ++j)
 			{
 				if (!fin.eof())
 				{
