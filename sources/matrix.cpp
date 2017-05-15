@@ -64,7 +64,7 @@ istream& operator >> (istream& infile, Matrix& result)
 
 void Matrix::search(const std::string& filename) 
 {
-	instream infile;
+	instream& infile;
 	infile.open (filename);
 	if (!infile.is_open())
 		cout << "Error! Try again!" << endl;
