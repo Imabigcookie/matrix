@@ -11,13 +11,13 @@ private:
 	int Strings;
 	int **matrix;
 public:
-	Matrix();//конструктор
+	Matrix();
 	Matrix(int _Columns, int _Strings);
 	Matrix(const Matrix& result);
 	~Matrix();
 	int Columns_() const;
 	int Strings_() const;
-	void search(string& filename);
+	void search(string filename);
 	bool operator == (const Matrix& m2) const;
 	Matrix operator + (const Matrix& m2) const;
 	Matrix operator * (const Matrix& m2) const;
