@@ -62,25 +62,27 @@ istream& operator >> (istream& infile, Matrix& result)
 	return infile;
 }
 
-void search(const string& filename) 
+void Matrix::scan(string filename)const
 {
-	instream &infile;
-	infile.open (filename);
-	if (!infile.is_open())
-		cout << "Error! Try again!" << endl;
+	ifstream fin;
+	fin.open(filename);
+	if (!fin.is_open())
+		cout << "The file isn't find" << endl;
 	else
 	{
-		matrix = new int*[Strings];
-		for (int i = 0; i < Strings; i++)
+		for (int i = 0; i < line; ++i)
 		{
-			matrix[i] = new int[Columns];
-			for (int j = 0; j < Columns; j++)
+			for (int j = 0; j < column; ++j)
 			{
-				infile >> matrix[i][j];
+				if (!fin.eof())
+				{
+					fin >> A[i][j];
+				}
+				else A[i][j] = 0;
 			}
 		}
 	}
-	infile.close();
+	fin.close();
 }
 
 ostream& operator << (ostream& outfile, Matrix& result)
