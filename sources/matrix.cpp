@@ -145,7 +145,6 @@ Matrix& Matrix::operator = (const Matrix& result)
 			delete[] matrix[i];
 		}
 		delete[] matrix;
-	
 		}
 	Strings = result.Strings;
 	Columns = result.Columns;
